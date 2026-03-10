@@ -24,9 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  display: grid;
   place-items: center;
-  min-width: 320px;
+  min-width: 380px;
   min-height: 100vh;
 }
 
@@ -39,10 +39,11 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  margin: 20px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #6f6a6a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
