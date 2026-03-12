@@ -14,7 +14,6 @@ function App() {
       text: taskText,
       completed: false
     }
-
     setTasks([...tasks, newTask])
     setTaskText("")
   }
