@@ -11,7 +11,7 @@ function App() {
         <input id="password" type="password" name="password" />
         <br />
         
-        <button></button>
+        <button type="submit">Submit</button>
         
       </form>
     </section>
