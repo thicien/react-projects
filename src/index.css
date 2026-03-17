@@ -16,7 +16,8 @@ body {
     margin-top: 20px;
     height: 2rem;
     text-indent: 10px;
-    gap: 50px;
+    gap: 100px;
+
 }
 
 input[type="submit"],
