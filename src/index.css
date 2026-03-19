@@ -1,40 +1,65 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 10px;
     background-color: #2DD4BF;
+    color: #262626;
 }
 
-.input {
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-block: 10px;
-    display: block;
-    padding: 12px 30px;
-    margin-top: 20px;
+h1 {
+    text-align: center;
+}
+
+form {
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 500px ;
+    margin-right: 500px;
+
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+input[type="email"], input[type="password"] {
+    border-radius: 100px;
+    border: 1px solid #0D9488;
     height: 2rem;
     text-indent: 10px;
-    gap: 100px;
-
+    margin-bottom: 20px;
 }
 
-input[type="submit"],
-button[type="submit"] {
-    padding: 12px 30px;
-    height: auto;
-    font-size: 1.1rem;
-    background-color: #1e5dd9;
-    color: white;
-    border: none;
-    border-radius: 6px;
+textarea {
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+fieldset {
+    border: 1px solid #262626;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 100px;
+    border: 1px solid #0D9488;
+    padding: 10px 30px;
     cursor: pointer;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    transition: all 0.1s ease-in-out;
 }
 
-button[type="submit"]:hover {
-    background-color: #1544a6;
+button:hover {
+    background-color: #115E59;
+    border-color: #042F2E;
+    color: white;
 }
