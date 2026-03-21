@@ -10,7 +10,6 @@ function App() {
     const employmentStatus = formData.get("employmentStatus");
     console.log({ email, password, employmentStatus });
   }
-
   return (
     <section>
       <h1>Signup form</h1>
