@@ -14,28 +14,11 @@ function App() {
       <h1>Signup form</h1>
       <form onSubmit={signUp}>
         <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          defaultValue=""
-          type="email"
-          name="email"
-          placeholder="mugisha@gmail.com"
-        />
-
+        <input id="email" defaultValue="" type="email" name="email" placeholder="mugisha@gmail.com"/>
         <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          defaultValue=""
-          type="password"
-          name="password"
-        />
-
+        <input id="password" defaultValue="" type="password" name="password" />
         <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          defaultValue=""
-        />
+        <textarea id="description" name="description" defaultValue=""/>
 
         <fieldset>
           <legend>Employment Status:</legend>
