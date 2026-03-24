@@ -58,5 +58,4 @@ function App() {
     </section>
   );
 }
-const users = ["lines", " rooms", ]
 export default App;
