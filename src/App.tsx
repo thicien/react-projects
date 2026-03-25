@@ -6,56 +6,51 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch users from API when component mounts
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
         if (!response.ok) {
           throw new Error('Failed to fetch users');
         }
-        
         const data: User[] = await response.json();
         setUsers(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred');
-        console.error('Error fetching users:', err);
+        setError(err instanceof Error ? error.messsage : 'An error occured');
+        console.error('Error while fetching users:', err)
       } finally {
         setLoading(false);
       }
-    };
-
+    }
     fetchUsers();
-  }, []); // Empty dependency array means this runs only on mount
-
+  }, []);
   if (loading) {
-    return <div className="loading">Loading users...</div>;
+    return <div className = "loading">loading users...</div>
   }
-
   if (error) {
-    return <div className="error">Error: {error}</div>;
+    return <div className="error">Error: {error}</div>
   }
-
+  
   return (
-    <section className="app">
-      <h1>Users from JSONPlaceholder API</h1>
-      <div className="users-grid">
+    <section className='app'>
+      <h1>Users from the API</h1>
+      <div className='users-grid'>
         {users.map((user) => (
-          <div key={user.id} className="user-card">
+          <div key={user.id} className='user-card'>
             <h2>{user.name}</h2>
-            <p><strong>Username:</strong> @{user.username}</p>
-            <p><strong>Email:</strong> {user.email}</p>
-            {user.phone && <p><strong>Phone:</strong> {user.phone}</p>}
-            {user.website && <p><strong>Website:</strong> {user.website}</p>}
-            {user.company && <p><strong>Company:</strong> {user.company.name}</p>}
+            <p><strong>Username:</strong>@{user.username}</p>
+            <p><strong>Email:</strong>{user.email}</p>
+            {user.phone && <p><strong>Phone:</strong>{user.phone}</p>}
+            {user.website && <p><strong>Website:</strong>{user.website}</p>}
+            {user.company && <p><strong>Company:</strong>{user.company.name}</p>}
           </div>
         ))}
       </div>
     </section>
   );
 }
-
 export default App;
+
+
