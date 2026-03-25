@@ -1,44 +1,61 @@
-import type { FormEvent } from 'react';
+import { useEffect, useState } from 'react';
+import type { User } from './types/User';
 
 function App() {
-  function signUp(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get("email");
-    const password = formData.get("password");
-    const employmentStatus = formData.get("employmentStatus");
-    console.log({ email, password, employmentStatus });
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Fetch users from API when component mounts
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch users');
+        }
+        
+        const data: User[] = await response.json();
+        setUsers(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
+        console.error('Error fetching users:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, []); // Empty dependency array means this runs only on mount
+
+  if (loading) {
+    return <div className="loading">Loading users...</div>;
   }
+
+  if (error) {
+    return <div className="error">Error: {error}</div>;
+  }
+
   return (
-    <section>
-      <h1>Signup form</h1>
-      <form onSubmit={signUp}>
-        <label htmlFor="email">Email:</label>
-        <input id="email" defaultValue="" type="email" name="email" placeholder="mugisha@gmail.com"/>
-        <label htmlFor="password">Password:</label>
-        <input id="password" defaultValue="" type="password" name="password" />
-        <label htmlFor="description">Description:</label>
-        <textarea id="description" name="description" defaultValue=""/>
-
-        <fieldset>
-          <legend>Employment Status:</legend>
-          <label>
-            <input type="radio" name="employmentStatus" value="unemployed" />
-            Unemployed
-          </label>
-          <label>
-            <input type="radio" name="employmentStatus" value="part-time" />
-            Part-time
-          </label>
-          <label>
-            <input type="radio" name="employmentStatus" value="full-time" />
-            Full-time
-          </label>
-        </fieldset>
-
-        <button type="submit">Submit</button>
-      </form>
+    <section className="app">
+      <h1>Users from JSONPlaceholder API</h1>
+      <div className="users-grid">
+        {users.map((user) => (
+          <div key={user.id} className="user-card">
+            <h2>{user.name}</h2>
+            <p><strong>Username:</strong> @{user.username}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            {user.phone && <p><strong>Phone:</strong> {user.phone}</p>}
+            {user.website && <p><strong>Website:</strong> {user.website}</p>}
+            {user.company && <p><strong>Company:</strong> {user.company.name}</p>}
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
+
 export default App;
