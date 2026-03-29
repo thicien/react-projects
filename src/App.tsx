@@ -51,7 +51,10 @@ function App() {
                            age: 21,
                            email: mugishathicien04@gmail.com,
                            city: "Kigali",
-                           school: 'RP kigali college'
+        school: 'RP kigali college' district: 'Nyamasheke' ejiii djkod iooi dodjid dod 'doiod dod diid ',
+        sector: "Kagano", cell: Rwesero, village: 'Mutusa'
+        cell: 'Kivu'
+        done
           }
         ))}
       </div>
