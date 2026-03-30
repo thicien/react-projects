@@ -46,16 +46,6 @@ function App() {
             {user.website && <p><strong>Website:</strong>{user.website}</p>}
             {user.company && <p><strong>Company:</strong>{user.company.name}</p>}
           </div>
-          const person = {
-                           names: 'thicien',
-                           age: 21,
-                           email: mugishathicien04@gmail.com,
-                           city: "Kigali",
-        school: 'RP kigali college' district: 'Nyamasheke' ejiii djkod iooi dodjid dod 'doiod dod diid ',
-        sector: "Kagano", cell: Rwesero, village: 'Mutusa'
-        cell: 'Kivu'
-        done
-          }
         ))}
       </div>
     </section>
