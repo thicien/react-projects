@@ -23,7 +23,7 @@ function App() {
    setTodos(todos.filter((t) => t.id !== id))
   }
 
-  
+
   return (
     <div className='min-h-screen bg-gray-50 flex flex-col items-center py-10'>
       <h1 className='text-6xl sm: text-8xl font-black text-gray-200 opacity-50 mb-8 tracking-widset lowercase'> todos</h1>
@@ -38,4 +38,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
