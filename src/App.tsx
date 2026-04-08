@@ -5,9 +5,9 @@ import type { Todo } from './types/index';
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([
-    { id: '1', text: 'I am A student', completed: false },
-    { id: '2', text: 'So far so good', completed: false },
-    { id: '3', text: 'A To do app developed using to consolidate your knowledge about React', completed: false }
+    { id: '1', text: '', completed: false },
+    { id: '2', text: '', completed: false },
+    { id: '3', text: '', completed: false }
   ])
   const addTodo = (text: string) => {
     if (!text.trim()) return;
@@ -36,4 +36,5 @@ function App() {
   );
 
 }
+
 export default App;
