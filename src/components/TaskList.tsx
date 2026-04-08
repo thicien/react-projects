@@ -12,6 +12,7 @@ export default function TaskList({ todos, onToggle, onDelete }: TaskListProps) {
     return <p className="text-center text-gray-500 py-6"></p>;
   }
 
+  
   return (
     <ul className="flex flex-col">
       {todos.map((todo) => (
