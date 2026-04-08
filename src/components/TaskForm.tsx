@@ -15,20 +15,15 @@ export default function TaskForm({ onAdd }: TaskFormProps) {
 
   return (
     <form className="w-full flex items-center" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Add todo..."
-        className="flex-grow py-3 text-lg focus:outline-none text-gray-500 placeholder-gray-200 bg-transparent"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+      <input type="text" placeholder="Add todo..."
+        className="flex-grow py-3 text-lg focus:outline-none text-gray-500 placeholder-gray-700 bg-gray-200"
+        value={text} onChange={(e) => setText(e.target.value)}
       />
       <button
         type="submit"
-        className="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center hover:bg-black"
+        className="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center hover:bg-gray-300"
         title="Add task"
-      >
-        <i className="solid"></i>
-      </button>
+      > + </button>
     </form>
   );
 }

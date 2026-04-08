@@ -4,19 +4,18 @@ import TaskList from './components/TaskList';
 import type { Todo } from './types/index';
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([
-    { id: '1', text: '', completed: false },
-    { id: '2', text: '', completed: false },
-    { id: '3', text: '', completed: false }
-  ])
+  const [todos, setTodos] = useState<Todo[]>([])
+
   const addTodo = (text: string) => {
     if (!text.trim()) return;
     const newTodo: Todo = { id: crypto.randomUUID(), text, completed: false };
     setTodos([newTodo, ...todos]);
   };
+
   const toggleTodo = (id: string) => {
     setTodos(todos.map(t => t.id === id ? { ...t, completed: !t.completed } : t ))
   }
+  
   const deleteTodo = (id: string) => {
     setTodos(todos.filter((t) => t.id !== id))
   }
