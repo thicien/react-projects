@@ -21,7 +21,7 @@ export default function TaskItem({ todo, onToggle, onDelete }: TaskItemProps) {
         className="w-10 h-10 rounded-full bg-gray-100 text-red-500 flex items-center justify-center hover:bg-gray-200 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100"
         title="Delete task"
       >
-        {/* <i className="fa-solid fa-trash-can"></i> */} Delete</button>
+        <i className="fa-solid fa-trash-can"></i></button>
     </li>
   );
 

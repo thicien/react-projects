@@ -21,9 +21,9 @@ export default function TaskForm({ onAdd }: TaskFormProps) {
       />
       <button
         type="submit"
-        className="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center hover:bg-gray-300"
+        className="w-8 h-8 rounded-full bg-teal-500 text-white flex items-center justify-center hover:bg-teal-600 transition-colors shrink-0"
         title="Add task"
-      > + </button>
+      > <i className='fa-solid fa-plus'></i> </button>
     </form>
   );
 }
