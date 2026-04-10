@@ -9,9 +9,10 @@ interface TaskListProps {
 
 export default function TaskList({ todos, onToggle, onDelete }: TaskListProps) {
   if (todos.length === 0) {
-    return <p className="text-center text-gray-500 py-6">No tasks yet.</p>;
+    return <p className="text-center text-gray-500 py-6"></p>;
   }
 
+  
   return (
     <ul className="flex flex-col">
       {todos.map((todo) => (
