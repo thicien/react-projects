@@ -20,11 +20,6 @@ function App() {
     setTodos(todos.filter((t) => t.id !== id))
   }
 
-
-  // const deleteTodo = (id: string) => {
-  //   setTodos(todos.filter((t) => t.id !== id));
-  // }
-  
   return (
     <div className='min-h-screen bg-gray-300 flex flex-col items-center py-10'>
       <h1 className='text-8xl font-black text-gray-900 opacity-50 mb-8 tracking-widset uppercase'> Todos</h1>
