@@ -10,15 +10,15 @@ function App() {
                 <Link to='/about' >About</Link>
                 <Link to='/contact'>Contact</Link>
                 <Link to='/services'>Services</Link>
-                <Link to='/courses'>Courses</Link>
+                <Link to='/courses/1?level=beginner&price=free'>Courses</Link>
             </nav>
             <Routes>
                 <Route path='/' element={<Home />} > Home page</Route> 
                 <Route path='/about' element={<About />} > About page</Route>
                 <Route path='/contact' element={<Contact />}>Contact page</Route>
                 <Route path='/services' element={<Services />}>
-                    <Route path='/web' element={<webServices />}></Route>
-                    <Route path='/mobile' element={<mobileServices />}></Route>
+                    <Route path='/web' element={<WebServices />}></Route>
+                    <Route path='/mobile' element={<MobileServices />}></Route>
                 </Route>
                 <Route path='/courses/:id' element={<CoursesDetails />}>Courses page</Route>
             </Routes>
@@ -68,7 +68,7 @@ function CoursesDetails() {
     return (
         <>
             <h1>Course ID: {id}</h1>
-            <h2>Level: {lever}</h2>
+            <h2>Level: {level}</h2>
             <h2>Price: {price}</h2>
             <button onClick={() => setSearchParams({level: 'advanced', price: 'paid'})
               }>upgrade course
@@ -76,7 +76,6 @@ function CoursesDetails() {
         </>
         
     )
-    return <h1>Get access to our online courses:{id }</h1>
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
