@@ -73,8 +73,7 @@ function CoursesDetails() {
             <button onClick={() => setSearchParams({level: 'advanced', price: 'paid'})
               }>upgrade course
             </button>
-        </>
-        
+        </> 
     )
 }
 
