@@ -62,8 +62,8 @@ function CoursesDetails() {
     const { id } = useParams();
     const [useSearchParams, setSearchParams] = useSearchParams();
 
-    const level = searchParams.get("level");
-    const price = searchParams.get("price");
+    const level = setSearchParams.get("level");
+    const price = setSearchParams.get("price");
 
     return (
         <>
