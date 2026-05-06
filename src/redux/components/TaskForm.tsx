@@ -21,7 +21,7 @@ export const TaskForm: React.FC = () => {
         className='border p-2 rounded mr-2'
         placeholder='Add a new task here'
       />
-      <button type='submit' className='bg-blue-700 text-white p-2 rounded '> Add Task</button>
+      <button type='submit' className='bg-blue-700 text-white p-2 rounded '> Add The Task</button>
     </form>
   )
 };
