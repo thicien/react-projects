@@ -45,7 +45,7 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, editTodo, toggleTodo, removeTodo } = todoSlice.action;
+export const { addTodo, editTodo, toggleTodo, removeTodo } = todoSlice.actions;
 
 export const store = configureStore({
   reducer: {

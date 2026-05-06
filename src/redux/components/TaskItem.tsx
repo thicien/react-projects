@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, UseDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleTodo, removeTodo, editTodo } from '../store';
 import type { Todo } from '../store';
 
