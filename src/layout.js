@@ -64,7 +64,6 @@ function CoursesDetails() {
 
     const level = setSearchParams.get("level");
     const price = setSearchParams.get("price");
-    
 
     return (
         <>
