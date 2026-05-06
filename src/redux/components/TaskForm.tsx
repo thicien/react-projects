@@ -24,4 +24,4 @@ export const TaskForm: React.FC = () => {
       <button type='submit' className='bg-blue-700 text-white p-2 rounded '> Add Task</button>
     </form>
   )
-}
+};
