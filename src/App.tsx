@@ -37,3 +37,30 @@
 // }
 
 // export default App;
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
+
+  
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="./Cart" element= {<Cart />} />
+        <Route path="./Details"/>
+        <Route path="./Payments" />
+        <Route path="./Reviews"/>
+        {/* <Route path='/Cart' ></Route>
+        <Route path='/Details'></Route>
+        <Route path='/Payment'></Route>
+        <Route path='/Review'></Route> */}
+      </Routes>
+    </BrowserRouter>
+  )
+}
+  
+export default App;
+
+
+
