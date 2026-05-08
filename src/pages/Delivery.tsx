@@ -18,7 +18,7 @@ export default function Delivery() {
       <br />
       <br />
       <button onClick={saveDelivary}>Save Delivery info</button><br />
-      <Link to='/Checkout/Reviews' >Review</Link>
+      <Link to='/checkout/Reviews' >Review</Link>
     </div>
   )
 }

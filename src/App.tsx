@@ -46,6 +46,7 @@ import Payment from "./pages/Payment";
 import Reviews from "./pages/Reviews";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
+import ProtectedPayment from "./pages/ProtectedPayment";
 function App() {
 
   
@@ -59,6 +60,9 @@ function App() {
           <Route path="Delivery" element={<Delivery />} />
           <Route path="Payment" element={<Payment />} />
           <Route path="Reviews" element={<Reviews />} />
+          <Route element={<ProtectedPayment />}>
+            <Route path="checkout/payment" element={<Payment /> } />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

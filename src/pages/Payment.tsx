@@ -13,7 +13,7 @@ export default function Payment() {
         </div>
       })}
       <h3>Total: 64,000 rwf</h3>
-      <Link to='/Checkout/Delivery' >Delivery</Link>
+      <Link to='/checkout/Delivery' >Delivery</Link>
     </div>
   )
 }
