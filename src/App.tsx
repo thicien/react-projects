@@ -40,6 +40,12 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Cart from "./pages/Cart";
+import Delivery from "./pages/Delivery";
+import Payment from "./pages/Payment";
+import Reviews from "./pages/Reviews";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
 function App() {
 
   
@@ -47,14 +53,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="./Cart" element= {<Cart />} />
-        <Route path="./Details"/>
-        <Route path="./Payments" />
-        <Route path="./Reviews"/>
-        {/* <Route path='/Cart' ></Route>
-        <Route path='/Details'></Route>
-        <Route path='/Payment'></Route>
-        <Route path='/Review'></Route> */}
+        <Route path="/checkout" element={<Layout/>}>
+          <Route index element={<Home/>}/>
+          <Route path="Cart" element= {<Cart />} />
+          <Route path="Delivery" element={<Delivery />} />
+          <Route path="Payment" element={<Payment />} />
+          <Route path="Reviews" element={<Reviews />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
