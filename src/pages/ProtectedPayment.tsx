@@ -19,3 +19,4 @@ export default function ProtectedPayment() {
     }
     return <Outlet />;
 }
+console.log(nums)
