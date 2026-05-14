@@ -9,7 +9,6 @@ type OutletcontextType = {
     cart: CartItem[];
     setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
 }
-console.log(color(OutletcontextType))
 export default function ProtectedPayment() {
     const { cart } = useOutletContext<OutletcontextType>();
     console.log(cart)
@@ -19,4 +18,3 @@ export default function ProtectedPayment() {
     }
     return <Outlet />;
 }
-console.log(nums)
